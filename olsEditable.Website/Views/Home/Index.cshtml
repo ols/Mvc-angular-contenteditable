@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "olsEditable";
+}
+
+<div data-ng-controller="HomeController" data-ng-cloak data-ng-init="getTexts();">
+    <h2>Edit texts</h2>
+    <div data-ng-repeat="item in textData track by $index">
+        <div contenteditable="true" ng-contenteditable="" text-key="{{item.TextId}}" text-value="{{item.Text}}" data-ng-model="item.TextId">{{item.Text}}</div>
+    </div>
+</div>
